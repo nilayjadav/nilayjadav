@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>FPGA Accelerators — GNSS  | Nilay Jadav</title>
+    <meta name="description" content="FPGA-based matrix multiplier for GNSS with 50x throughput improvement, and AI greenhouse robot published in IEEE.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/vendor.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/project.css">
+</head>
+
+<body id="top">
+    <div class="s-pagewrap">
+        <header class="s-header">
+            <div class="header-mobile">
+                <span class="mobile-home-link"><a href="../index.html">Nilay.</a></span>
+                <a class="mobile-menu-toggle" href="#0"><span>Menu</span></a>
+            </div>
+            <div class="row wide main-nav-wrap">
+                <nav class="column lg-12 main-nav">
+                    <ul>
+                        <li><a href="../index.html" class="home-link">Nilay.</a></li>
+                        <li><a href="../index.html#intro">Intro</a></li>
+                        <li><a href="../index.html#about">About</a></li>
+                        <li class="current"><a href="../index.html#works">Projects</a></li>
+                        <li><a href="../index.html#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="s-content">
+            <section class="s-project-hero">
+                <div class="row">
+                    <div class="column lg-12">
+                        <div class="text-pretitle with-line">FPGA &bull; IEEE Published &bull; 2024</div>
+                        <h1 class="project-hero__title">FPGA Accelerators for GNSS</h1>
+                        <div class="project-hero__meta">
+                            <span>Verilog</span>
+                            <span>Vivado HLS</span>
+                            <span>AXIS / DMA</span>
+                            <span>Space-Grade FPGA</span>
+                            <span>50&times; Throughput</span>
+                            <span>IEEE Papers</span>
+                        </div>
+                        <p class="project-hero__summary">
+                           Hardware acceleration project that went from RTL to published papers. One pushed 
+                            GNSS matrix math to 50&times; faster on a space-grade FPGA at ISRO. 
+                            <br>
+                            <a href = "https://ieeexplore.ieee.org/document/10969225"> IEEE Publication Link</a>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="s-project-content">
+                <div class="row">
+                    <div class="column lg-12 project-content__main">
+
+                     <div class="project-media">
+                            <img src="../images/portfolio/gallery/zync.jpg" alt="Zync Ultrascale" loading="lazy">
+                            <p class="project-media__caption">Yeah, just the board i used</p>
+                        </div>
+
+                        <h3> FPGA Matrix Multiplier for GNSS (ISRO)</h3>
+                        <p>
+                            During my time at the Space Applications Center (ISRO), I worked on GNSS-based satellite 
+                            positioning algorithms that needed to run on a space-grade FPGA board. The bottleneck 
+                            was matrix multiplication, GNSS positioning involves heavy linear algebra, and the 
+                            software implementation on the existing processor couldn't keep up with real-time demands.
+                            And the best part, the data which needs to be processed is 64 bits, and the FPGA supports 32 bit floating operation. 
+                            So what did I do? I got the data in 32 bits and combined it in the FPGA, did the operation in the custom HLS IP and 
+                            then pushed the data in 32 bits again to then join it back in the host server. So that was slick! Right?
+                        </p>
+                        <p>
+                            Okay, so what do I need? The GNSS data needs to be processed and acquired in under 10 seconds, because that
+                            is when the GNSS data will change, making the result useless! So I tried pipelining, parallel threading (kinda!?), 
+                            vectorization, changing storage elements on the FPGA and more.
+                            Eventually I developed GNSS positioning algorithm in C and Verilog and created custom hardware 
+                            accelerators using Vivado HLS. The accelerators were integrated into the system via 
+                            AXIS and DMA protocols, enabling real-time data ingestion from MATLAB for testing and 
+                            validation. By optimizing the matrix multiplication kernels on FPGA, I achieved more 
+                            than 50&times; improvement in throughput for real-time GNSS data processing compared 
+                            to the software baseline. Technically my design was O(N^2) and O(Nmax^2), so technically the HLS design would run faster 
+                            if the matrices are different sizes, which is in my case and it turned out to make use of the hardware in a better, dynamic way!
+                        </p>
+
+                        <h3>Tech Stack</h3>
+                        <div class="tech-stack">
+                            <span>Verilog</span>
+                            <span>Vivado HLS</span>
+                            <span>Vitis</span>
+                            <span>AXIS / DMA</span>
+                            <span>Space-Grade FPGA</span>
+                            <span>MATLAB</span>
+                            <span>64-bit Floating-Point</span>
+                        </div>
+
+
+
+                        <div class="project-results">
+                            <h4>Results</h4>
+                            <ul>
+                                <li><strong>50&times;+ throughput improvement</strong> for GNSS matrix multiplication on FPGA vs. software</li>
+                                <li><strong>Real-time data ingestion</strong> via custom AXIS/DMA integration with MATLAB</li>
+                            </ul>
+                        </div>
+
+                        <h3>What I Took Away</h3>
+                        <p>
+                            Working at ISRO taught me what "mission-critical" really means you don't get to ship 
+                            a bugfix to space. The FPGA work forced me to think in terms of parallelism and 
+                            pipelining, which is a fundamentally different mindset from software. And going through 
+                            the IEEE publication process gave me experience translating engineering results into 
+                            rigorous academic contributions.
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="column lg-12 project-nav">
+                        <a href="sightsense.html">&larr; Previous: SightSense</a>
+                        <a href="../index.html#works" class="project-nav__back">All Projects &rarr;</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="s-footer">
+            <div class="row">
+                <div class="column ss-copyright"><span>&copy; 2025 Nilay Jadav</span><span>Design by <a href="https://www.styleshout.com/">StyleShout</a></span></div>
+                <div class="ss-go-top"><a title="Back to Top" href="#top"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/></svg></a></div>
+            </div>
+        </footer>
+    </div>
+    <script src="../js/plugins.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Correlation Power Analysis on STM32F4 | Nilay Jadav</title>
+    <meta name="description" content="Python-based CPA attack on AES-128 hardware traces, recovering full keys with fewer than 5,000 traces.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/vendor.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/project.css">
+</head>
+
+<body id="top">
+
+    <div class="s-pagewrap">
+
+        <header class="s-header">
+            <div class="header-mobile">
+                <span class="mobile-home-link"><a href="../index.html">Nilay.</a></span>
+                <a class="mobile-menu-toggle" href="#0"><span>Menu</span></a>
+            </div>
+            <div class="row wide main-nav-wrap">
+                <nav class="column lg-12 main-nav">
+                    <ul>
+                        <li><a href="../index.html" class="home-link">Nilay.</a></li>
+                        <li><a href="../index.html#intro">Intro</a></li>
+                        <li><a href="../index.html#about">About</a></li>
+                        <li class="current"><a href="../index.html#works">Projects</a></li>
+                        <li><a href="../index.html#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="s-content">
+
+            <section class="s-project-hero">
+                <div class="row">
+                    <div class="column lg-12">
+                        <div class="text-pretitle with-line">Hardware Security &bull; March 2025</div>
+                        <h1 class="project-hero__title">Correlation Power Analysis on STM32F4</h1>
+                        <div class="project-hero__meta">
+                            <span>Python</span>
+                            <span>AES-128</span>
+                            <span>STM32F4</span>
+                            <span>Side-Channel Attack</span>
+                            <span>CPA</span>
+                        </div>
+                        <p class="project-hero__summary">
+                            Cracking a crypto key by watching how much power a chip uses — that was the idea. 
+                            I ran a Python-based Correlation Power Analysis attack on AES-128 traces from an STM32F4 
+                            and recovered the full key with fewer than 5,000 traces. <br>
+                            <a href = "https://github.com/nilayjadav/CPA"> Project Github Repository</a>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="s-project-content">
+                <div class="row">
+                    <div class="column lg-12 project-content__main">
+
+                        <div class="project-media">
+                            <img src="../images/portfolio/gallery/CPAPicture1.jpg" alt="CPA on STM32F4" loading="lazy">
+                            <p class="project-media__caption">Power trace analysis on Oscilloscope</p>
+                        </div>
+                        <div class="project-media">
+                            <img src="../images/portfolio/gallery/CPAPicture2.jpg" alt="CPA on STM32F4" loading="lazy">
+                            <p class="project-media__caption">Power trace analysis setup on ESP32</p>
+                        </div>
+                        <h3>What's the Deal?</h3>
+                        <p>
+                            AES-128 is mathematically rock-solid, but the hardware running it tells a different story. 
+                            Every time the chip encrypts a block, its power draw fluctuates in patterns that correlate 
+                            with the secret key bytes being processed. Correlation Power Analysis exploits exactly 
+                            this, using statistics to peel back the key, one byte at a time, from nothing but 
+                            power consumption measurements.
+                        </p>
+
+                        <h3>How I Built It</h3>
+                        <p>
+                            I worked with an amazing teammate named Zachary on this one. We attempted to collect the traces directly from the ESP32 hardware.
+                            The ESP32 was connected in parallel to an oscilloscope to measure the power consumption fluctuations during encryption.
+                            Unfortunately, a large dataset would be required to break AES (approximately 10 hours worth of precise trace measurements).
+                            Instead, we used an open-source dataset <br>(STM32F4 D1, <a href = https://github.com/urioja/AESPTv2> Dataset Github</a>)
+                        </p>
+                        <p>
+                            What made this especially interesting was extending the attack to second-order masked AES. 
+                            Masking is a common countermeasure, it splits sensitive values into random shares but 
+                            with the right preprocessing (combining traces from different points in time), I was able 
+                            to uncover weaknesses even in the protected implementation. The full analysis is 
+                            reproducible and documented.
+                        </p>
+
+                        <h3>Tech Stack</h3>
+                        <div class="tech-stack">
+                            <span>Python</span>
+                            <span>NumPy / SciPy</span>
+                            <span>STM32F4</span>
+                            <span>AES-128</span>
+                            <span>Oscilloscope</span>
+                            <span>Matplotlib</span>
+                        </div>
+
+                        <h3>Demo Video</h3>
+                        <a href="https://www.youtube.com/watch?v=d20Z1UNwsuE" target="_blank" rel="noopener" class="video-thumb">
+                            <img src="https://img.youtube.com/vi/d20Z1UNwsuE/maxresdefault.jpg" alt="Watch demo video" loading="lazy">
+                            <div class="video-thumb__play"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>
+                            <div class="video-thumb__label">Watch on YouTube &nearr;</div>
+                        </a>
+
+
+                        <div class="project-results">
+                            <h4>Results</h4>
+                            <ul>
+                                <li><strong>Full AES-128 key recovery</strong> with fewer than 5,000 power traces</li>
+                                <li><strong>Extended to second-order masked AES</strong>, uncovering weaknesses in countermeasures</li>
+                                <li><strong>Reproducible analysis pipeline</strong> published for further research</li>
+                            </ul>
+                        </div>
+
+                        <h3>What I Took Away</h3>
+                        <p>
+                            This project hammered home that "mathematically secure" and "physically secure" are two 
+                            very different things. It also sharpened my signal-processing chops and gave me a deep 
+                            appreciation for why hardware countermeasures like masking and shuffling exist and why 
+                            they're still not bulletproof.
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="column lg-12 project-nav">
+                        <a href="../index.html#works" class="project-nav__back">&larr; All Projects</a>
+                        <a href="../index.html#works" class="project-nav__back">&larr; All Projects</a>
+                        <a href="self-driving-robot.html">Next: Self-Driving Robot &rarr;</a>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="s-footer">
+            <div class="row">
+                <div class="column ss-copyright">
+                    <span>&copy; 2025 Nilay Jadav</span>
+                    <span>Design by <a href="https://www.styleshout.com/">StyleShout</a></span>
+                </div>
+                <div class="ss-go-top">
+                    <a title="Back to Top" href="#top">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <script src="../js/plugins.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

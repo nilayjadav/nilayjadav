@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>IoT-Blockchain Water Quality Drone | Nilay Jadav</title>
+    <meta name="description" content="Blockchain-based water drone for decentralized secure monitoring using Jetson Orin and industrial sensors.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/vendor.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/project.css">
+</head>
+
+<body id="top">
+    <div class="s-pagewrap">
+        <header class="s-header">
+            <div class="header-mobile">
+                <span class="mobile-home-link"><a href="../index.html">Nilay.</a></span>
+                <a class="mobile-menu-toggle" href="#0"><span>Menu</span></a>
+            </div>
+            <div class="row wide main-nav-wrap">
+                <nav class="column lg-12 main-nav">
+                    <ul>
+                        <li><a href="../index.html" class="home-link">Nilay.</a></li>
+                        <li><a href="../index.html#intro">Intro</a></li>
+                        <li><a href="../index.html#about">About</a></li>
+                        <li class="current"><a href="../index.html#works">Projects</a></li>
+                        <li><a href="../index.html#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="s-content">
+            <section class="s-project-hero">
+                <div class="row">
+                    <div class="column lg-12">
+                        <div class="text-pretitle with-line">IoT &amp; Blockchain &bull; July 2024</div>
+                        <h1 class="project-hero__title">IoT-Blockchain Water Quality &amp; Monitoring Drone</h1>
+                        <div class="project-hero__meta">
+                            <span>Jetson Orin</span>
+                            <span>Blockchain</span>
+                            <span>Industrial Sensors</span>
+                            <span>SSIP Funded — $1,000</span>
+                        </div>
+                        <p class="project-hero__summary">
+                            How do you trust water-quality data collected in remote areas? You put it on a blockchain. 
+                            I built an autonomous drone that collects environmental readings with industrial sensors 
+                            and logs every data point to a decentralized ledger for tamper-proof monitoring.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="s-project-content">
+                <div class="row">
+                    <div class="column lg-12 project-content__main">
+
+                        <div class="project-media">
+                            <img src="../images/portfolio/gallery/iot_2.jpeg" alt="IoT Water Quality Drone" loading="lazy">
+                            <p class="project-media__caption">Water quality monitoring industrial sensor we used</p>
+                        </div>
+
+                        <h3>The Problem</h3>
+                        <p>
+                            Traditional water quality monitoring is manual, slow, and critically easy to tamper 
+                            with. Environmental data collected in the field can be altered before it reaches 
+                            regulators. The challenge was to build a system where the data speaks for itself: 
+                            collected autonomously and secured cryptographically so no one can change it after the fact.
+                        </p>
+
+                        <h3>How I Built It</h3>
+                        <p>
+                            The platform combines a Jetson Orin for onboard processing with industrial-grade water 
+                            quality sensors pH, dissolved oxygen, turbidity, temperature. The Jetson handles 
+                            sensor fusion (wrote code for RS485 protocol), system control interfacing, and the blockchain client that signs and 
+                            commits each reading to a distributed ledger. Find the basic setup video made using a RPi below. 
+                            Unfortunately I am unable to get the real floater images. But we did interface the sensor with the Orin and got it to 
+                            run on a car battery along with the blockchain server setup sending encrypted sensor data. 
+                        </p>
+                        <p>
+                            The blockchain layer is what makes this different from a typical sensor drone. Each 
+                            measurement is timestamped, digitally signed on the device itself, and pushed to the 
+                            chain. Once it's there, it can't be quietly edited. Stakeholders can audit the full 
+                            history and verify that every data point traces back to a real sensor reading at a 
+                            specific GPS coordinate and time. Many use cases like, monitoring for water bodies near industial areas, 
+                            marine life water severity sensing, cycle data logging etc.
+                            
+                        </p>
+
+                        <p>
+                            The biggest problem? Corruption. Industries dumping toxic waste into lakes and rivers 
+                            know exactly when inspectors are coming to collect water samples. They clean up just 
+                            before the visit, pass the test, and go right back to dumping once the inspectors leave. 
+                            The whole process takes days — plenty of time to game the system. Our setup solves that 
+                            by collecting and logging water quality data autonomously and continuously, with every 
+                            reading locked to a blockchain so no one can tamper with the evidence after the fact.
+                        </p>
+
+                        <h3>Tech Stack</h3>
+                        <div class="tech-stack">
+                            <span>NVIDIA Jetson Orin</span>
+                            <span>Python</span>
+                            <span>Blockchain / Smart Contracts</span>
+                            <span>Industrial Sensors</span>
+                            <span>Drone Platform</span>
+                            <span>GPS</span>
+                        </div>
+
+                        <h3>Demo Video</h3>
+                        <a href="https://drive.google.com/file/d/1bJpCX3L3Q3tk_aYVGxomYRhZ4JrC5PTG/view?usp=sharing" target="_blank" rel="noopener" class="video-thumb">
+                        <img src="../images/portfolio/gallery/iot_1.jpg" alt="Watch demo video" loading="lazy">
+                        <div class="video-thumb__play"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>
+                        <div class="video-thumb__label">Watch on Google Drive &nearr;</div>
+                        </a>    
+
+
+
+                        <div class="project-results">
+                            <h4>Results</h4>
+                            <ul>
+                                <li><strong>$1,000 in SSIP funding</strong> (Student Startup and Innovation Policy)</li>
+                                <li><strong>Decentralized, tamper-proof monitoring</strong> — blockchain-secured data trail</li>
+                                <li><strong>Multi-parameter sensing</strong> with real-time onboard processing on Jetson Orin</li>
+                            </ul>
+                        </div>
+
+                        <h3>What I Took Away</h3>
+                        <p>
+                            This project pushed me to think about trust in data, not just collecting it, but 
+                            proving it's real. It also gave me practical experience bridging hardware sensor 
+                            systems with decentralized software, which is a combination I hadn't seen anyone else 
+                            try on an embedded drone platform.
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="column lg-12 project-nav">
+                        <a href="self-driving-robot.html">&larr; Previous: Self-Driving Robot</a>
+                        <a href="../index.html#works" class="project-nav__back">&larr; All Projects</a>
+                        <a href="smart-irrigation.html">Next: Smart Irrigation &rarr;</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="s-footer">
+            <div class="row">
+                <div class="column ss-copyright"><span>&copy; 2025 Nilay Jadav</span><span>Design by <a href="https://www.styleshout.com/">StyleShout</a></span></div>
+                <div class="ss-go-top"><a title="Back to Top" href="#top"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/></svg></a></div>
+            </div>
+        </footer>
+    </div>
+    <script src="../js/plugins.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

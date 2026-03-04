@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>ESP32 Smart Irrigation Nodes | Nilay Jadav</title>
+    <meta name="description" content="ESP32 irrigation nodes with web access, mobile application, and LoRa-based long-range transmission.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/vendor.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/project.css">
+</head>
+
+<body id="top">
+    <div class="s-pagewrap">
+        <header class="s-header">
+            <div class="header-mobile">
+                <span class="mobile-home-link"><a href="../index.html">Nilay.</a></span>
+                <a class="mobile-menu-toggle" href="#0"><span>Menu</span></a>
+            </div>
+            <div class="row wide main-nav-wrap">
+                <nav class="column lg-12 main-nav">
+                    <ul>
+                        <li><a href="../index.html" class="home-link">Nilay.</a></li>
+                        <li><a href="../index.html#intro">Intro</a></li>
+                        <li><a href="../index.html#about">About</a></li>
+                        <li class="current"><a href="../index.html#works">Projects</a></li>
+                        <li><a href="../index.html#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="s-content">
+            <section class="s-project-hero">
+                <div class="row">
+                    <div class="column lg-12">
+                        <div class="text-pretitle with-line">IoT &amp; Embedded &bull; July 2022</div>
+                        <h1 class="project-hero__title">ESP32 Smart Irrigation Nodes</h1>
+                        <div class="project-hero__meta">
+                            <span>ESP32</span>
+                            <span>LoRa</span>
+                            <span>Web &amp; Mobile Site</span>
+                            <span>IoT</span>
+                        </div>
+                        <p class="project-hero__summary">
+                            Smart irrigation that actually works in the field. I built ESP32-based sensor nodes 
+                            with LoRa radio for long-range communication, plus a web and mobile app so farmers 
+                            can monitor and control everything from their phone.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="s-project-content">
+                <div class="row">
+                    <div class="column lg-12 project-content__main">
+
+                        <div class="project-media">
+                            <img src="../images/portfolio/gallery/irrigation_1.jpg" alt="Smart Irrigation Block Diagram" loading="lazy">
+                            <p class="project-media__caption">ESP32 irrigation Block Diagram</p>
+                        </div>
+                        
+                        <div class="project-media">
+                            <img src="../images/portfolio/gallery/irrigation_2.jpg" alt="Smart Irrigation" loading="lazy">
+                            <p class="project-media__caption">ESP32 irrigation Basic Setup</p>
+                        </div>
+
+                        <div class="project-media">
+                            <img src="../images/portfolio/gallery/irrigation_3.jpg" alt="Smart Irrigation Node" loading="lazy">
+                            <p class="project-media__caption">ESP32 irrigation Site</p>
+                        </div>
+
+                        <div class="project-media">
+                            <img src="../images/portfolio/gallery/irrigation_4.jpg" alt="Smart Irrigation Node" loading="lazy">
+                            <p class="project-media__caption">ESP32 irrigation mobile site</p>
+                        </div>
+                        <h3>The Problem</h3>
+                        <p>
+                            Most irrigation systems still run on dumb timers, water goes on at 6 AM whether the 
+                            soil is dry or soaked from last night's rain. Fields are big, Wi-Fi doesn't reach, 
+                            and farmers need something that just works without expensive infrastructure.
+                        </p>
+
+                        <h3>How I Built It</h3>
+                        <p>
+                            Each node is an ESP32 paired with soil moisture and temp/humidity sensors. The firmware 
+                            handles sensor sampling, local decision-making (water or don't water), allows crop selection
+                             which is precisely setup for particular soil, location and current climate and communication. 
+                            The interesting part is the networking. I used Wi-fi for this setup but I made the upgaded version 
+                            with a LoRa radio for long-range, low-power 
+                            communication between nodes spread across the field. A gateway node bridges the LoRa 
+                            mesh to Wi-Fi for cloud connectivity. 
+                        </p>
+                        <p>
+                            On the user side, I built both a web interface and a mobile site. Farmers can see 
+                            real-time soil conditions, check node status, review watering history, and manually 
+                            override the automatic scheduling when they want to. The system can also pull weather 
+                            forecasts to skip watering cycles before predicted rainfall.
+                        </p>
+
+                        <h3>Tech Stack</h3>
+                        <div class="tech-stack">
+                            <span>ESP32</span>
+                            <span>LoRa (SX1278)</span>
+                            <span>Wi-Fi</span>
+                            <span>Soil Moisture Sensors</span>
+                            <span>Web Application</span>
+                            <span>Mobile Application</span>
+                        </div>
+
+
+                        <div class="project-results">
+                            <h4>Results</h4>
+                            <ul>
+                                <li><strong>Won a hardware making competition</strong> first price in 52 teams! </li>
+                                <li><strong>Web + mobile app</strong> for real-time monitoring and manual override</li>
+                                <li><strong>Full-stack IoT system</strong> firmware, radio networking, API calls and UI</li>
+                            </ul>
+                        </div>
+
+                        <h3>What I Took Away</h3>
+                        <p>
+                            This was my lucky IoT project from sensor to screen, and it taught me the messy 
+                            reality of deploying electronics outdoors, antenna placement, power budgeting, 
+                            weatherproofing. 
+                            The LoRa networking was particularly satisfying because getting 
+                            reliable, long-range wireless on a shoestring budget felt like a genuine engineering win.
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="column lg-12 project-nav">
+                        <a href="iot-drone.html">&larr; Previous: IoT Water Drone</a>
+                        <a href="../index.html#works" class="project-nav__back">&larr; All Projects</a>
+                        <a href="sightsense.html">Next: SightSense &rarr;</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="s-footer">
+            <div class="row">
+                <div class="column ss-copyright"><span>&copy; 2025 Nilay Jadav</span><span>Design by <a href="https://www.styleshout.com/">StyleShout</a></span></div>
+                <div class="ss-go-top"><a title="Back to Top" href="#top"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/></svg></a></div>
+            </div>
+        </footer>
+    </div>
+    <script src="../js/plugins.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

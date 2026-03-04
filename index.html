@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html class="no-js ss-preload" lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <title>Nilay Jadav | Embedded Systems Engineer</title>
+    <meta name="description" content="Portfolio of Nilay Jadav — Embedded Systems Engineer specializing in FPGA, real-time firmware, and hardware-software co-design.">
+    <meta name="author" content="Nilay Jadav">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Custom overrides -->
+    <style>
+        /* --- Make project links clearly clickable --- */
+        .folio-list__item-link {
+            text-decoration: none;
+        }
+        .about-info__text {
+            padding-top: var(--vspace-1) !important;
+        }
+        .folio-list__item-text {
+            position: relative;
+        }
+        /* "View Project" indicator under each item */
+        .folio-list__view-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin-top: 1.2rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--color-1, #cf1767);
+            transition: gap 0.4s ease;
+        }
+        .folio-list__item:hover .folio-list__view-cta {
+            gap: 1.2rem;
+        }
+        .folio-list__view-cta svg {
+            width: 14px;
+            height: 14px;
+            fill: currentColor;
+        }
+        /* Make proj-link arrow more visible */
+        .attention-getter {
+            text-align: justify;
+        }
+        .folio-list__proj-link {
+            background: var(--color-1, #cf1767);
+            border-radius: 50%;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+        .folio-list__item:hover .folio-list__proj-link {
+            transform: scale(1.3);
+        }
+
+        /* --- Skills grid --- */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .skills-grid__group h4 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.35);
+            margin-bottom: 1rem;
+        }
+        .skills-grid__group ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .skills-grid__group ul li {
+            font-size: 1.6rem;
+            padding: 0.4rem 0;
+            color: var(--color-text-light);
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+        }
+        .s-works {
+            padding-bottom: 0;
+        }
+    </style>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+</head>
+
+<body id="top">
+
+    <!-- # preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader">
+        </div>
+    </div>
+
+
+    <!-- # page wrap
+    ================================================== -->
+    <div class="s-pagewrap">
+
+        <div class="circles">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+
+        <!-- ## site header 
+        ================================================== -->
+        <header class="s-header">
+
+            <div class="header-mobile">
+                <span class="mobile-home-link"><a href="index.html">Nilay.</a></span>
+                <a class="mobile-menu-toggle" href="#0"><span>Menu</span></a>
+            </div>
+
+            <div class="row wide main-nav-wrap">
+                <nav class="column lg-12 main-nav">
+                    <ul>
+                        <li><a href="index.html" class="home-link">Nilay.</a></li>
+                        <li class="current"><a href="#intro" class="smoothscroll">Intro</a></li>
+                        <li><a href="#about" class="smoothscroll">About</a></li>
+                        <li><a href="#works" class="smoothscroll">Projects</a></li>
+                        <li><a href="#contact" class="smoothscroll">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </header>
+
+
+        <!-- ## main content
+        ================================================== -->
+        <main class="s-content">
+
+
+            <!-- ### intro
+            ================================================== -->
+            <section id="intro" class="s-intro target-section">
+
+                <div class="row intro-content wide">
+
+                    <div class="column">
+                        <div class="text-pretitle with-line">
+                            Hey there
+                        </div>
+
+                        <h1 class="text-huge-title">
+                            I'm Nilay Jadav, <br>
+                            I build code <br>
+                            that sit between <br>
+                            hardware &amp; <br>
+                            software.
+                        </h1>
+                    </div>
+
+                    <ul class="intro-social">
+                        <li><a href="https://linkedin.com/in/nilayjadav" target="_blank" rel="noopener">LinkedIn</a></li>
+                        <li><a href="https://github.com/nilayjadav" target="_blank" rel="noopener">GitHub</a></li>
+                        <li><a href="mailto:nilayj@umd.edu">Email</a></li>
+                    </ul>
+
+                </div>
+
+                <a href="#about" class="intro-scrolldown smoothscroll">
+                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z"/></svg>
+                </a>
+
+            </section>
+
+
+            <!-- ### about
+            ================================================== -->
+            <section id="about" class="s-about target-section">
+
+                <div class="row about-info wide" data-animate-block>
+
+                    <div class="column lg-6 md-12 about-info__pic-block">
+                        <img src="images/about-photo.jpg" 
+                             srcset="images/about-photo.jpg 1x, images/about-photo@2x.jpg 2x" alt="Nilay Jadav" class="about-info__pic" data-animate-el loading="lazy">
+                    </div>
+
+                    <div class="column lg-6 md-12">
+                        <div class="about-info__text">
+
+                            <h2 class="text-pretitle with-line" data-animate-el>
+                                About
+                            </h2>
+                            <p class="attention-getter" data-animate-el>
+                                I'm an embedded systems engineer wrapping up my Master's at UMD (GPA 3.95). 
+                                I live in that sweet spot where firmware meets silicon, bare-metal C on STM32s 
+                                one day, FPGA accelerators in Verilog the next. I've worked on GNSS hardware at 
+                                a space center, MRI coils actuation on Zynq FPGAs at a medical startup, and audio compression 
+                                with neural networks for Dolby. When I'm not debugging timing issues, I'm probably 
+                                soldering something I shouldn't be, been at it since age 7.
+                            </p>
+                            <a href="Nilay_Resume.pdf" class="btn btn--medium u-fullwidth" data-animate-el target="_blank">Download CV</a>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row about-expertise" data-animate-block>
+                    <div class="column lg-12">
+
+                        <h2 class="text-pretitle" data-animate-el>Skills &amp; Tools</h2>
+
+                        <div class="skills-grid" data-animate-el>
+                            <div class="skills-grid__group">
+                                <h4>Languages</h4>
+                                <ul>
+                                    <li>C / C++</li>
+                                    <li>Embedded C</li>
+                                    <li>Python</li>
+                                    <li>Verilog / SystemVerilog</li>
+                                    <li>MATLAB</li>
+                                    <li>Assembly</li>
+                                    
+                                </ul>
+                            </div>
+                            <div class="skills-grid__group">
+                                <h4>Hardware</h4>
+                                <ul>
+                                    <li>FPGA / Zynq SoC</li>
+                                    <li>ARM / AVR / PIC</li>
+                                    <li>Jetson Boards</li>
+                                    <li>Raspberry Pi</li>
+                                    <li>PCB Design</li>
+                                    <li>Power Electronics</li>
+                                    <li>Everything Bagel (I meant everything in electronics)</li>
+                                </ul>
+                            </div>
+                            <div class="skills-grid__group">
+                                <h4>Protocols</h4>
+                                <ul>
+                                    <li>I2C / SPI / UART</li>
+                                    <li>RS232 / RS485</li>
+                                    <li>LoRa / Wi-Fi / BLE</li>
+                                    <li>AXIS / DMA</li>
+                                </ul>
+                            </div>
+                            <div class="skills-grid__group">
+                                <h4>Tools</h4>
+                                <ul>
+                                    <li>Vivado / Vitis / HLS</li>
+                                    <li>STM32 CubeIDE</li>
+                                    <li>Atmel Studio 7</li>
+                                    <li>Proteus</li>
+                                    <li>Keil</li>
+                                    <li>KiCad / Altium</li>
+                                    <li>Arduino IDE</li>
+                                    <li>Git / JIRA</li>
+                                    <li>Fusion 360</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="row about-timelines" data-animate-block>
+
+                    <div class="column lg-6 tab-12">
+
+                        <h2 class="text-pretitle" data-animate-el>
+                            Experience
+                        </h2>
+
+                        <div class="timeline" data-animate-el>
+
+                            <div class="timeline__block">
+                                <div class="timeline__bullet"></div>
+                                <div class="timeline__header">
+                                    <h4 class="timeline__title">NeurQi (Weinberg Medical Physics)</h4>
+                                    <h5 class="timeline__meta">Electrical Engineer Intern</h5>
+                                    <p class="timeline__timeframe">Oct 2025 – Present &bull; North Bethesda, MD</p>
+                                </div>
+                                <div class="timeline__desc">
+                                    <p>Implementing Zynq FPGA-based control firmware for MRI coil actuation, timing synchronization, and safety monitoring. Designing high-efficiency power supply modules for the Mobile MRI system (Ladybug).</p>
+                                </div>
+                            </div>
+    
+                            <div class="timeline__block">
+                                <div class="timeline__bullet"></div>
+                                <div class="timeline__header">
+                                    <h4 class="timeline__title">UMD &times; Dolby Laboratories</h4>
+                                    <h5 class="timeline__meta">Graduate Research Assistant</h5>
+                                    <p class="timeline__timeframe">Aug 2024 – Jan 2025 &bull; College Park, MD</p>
+                                </div>
+                                <div class="timeline__desc">
+                                    <p>Built and analyzed neural networks for audio using reservoir computing. Implemented a stereo audio algorithm in MATLAB achieving 45% data compression.</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline__block">
+                                <div class="timeline__bullet"></div>
+                                <div class="timeline__header">
+                                    <h4 class="timeline__title">Space Applications Center (ISRO)</h4>
+                                    <h5 class="timeline__meta">Researcher</h5>
+                                    <p class="timeline__timeframe">Dec 2023 – May 2024 &bull; Ahmedabad, India</p>
+                                </div>
+                                <div class="timeline__desc">
+                                    <p>Developed GNSS satellite positioning algorithms on space-grade FPGA using Verilog. Created custom HLS accelerators integrated via AXIS/DMA, achieving 50&times; throughput improvement for real-time positioning.</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline__block">
+                                <div class="timeline__bullet"></div>
+                                <div class="timeline__header">
+                                    <h4 class="timeline__title">AethonLabs LLC</h4>
+                                    <h5 class="timeline__meta">IoT Intern</h5>
+                                    <p class="timeline__timeframe">Mar 2023 – Sep 2023 &bull; San Francisco, CA (Remote)</p>
+                                </div>
+                                <div class="timeline__desc">
+                                    <p>Researched and developed proof-of-concept IoT products including a Smart HUD Helmet and Smart Garage Door. Built ESP32-based wireless keypad with multi-PIN access and smart-home integration.</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline__block">
+                                <div class="timeline__bullet"></div>
+                                <div class="timeline__header">
+                                    <h4 class="timeline__title">Motorola Solutions</h4>
+                                    <h5 class="timeline__meta">Student Intern</h5>
+                                    <p class="timeline__timeframe">Jul 2022 – Nov 2022 &bull; Texas, USA (Remote)</p>
+                                </div>
+                                <div class="timeline__desc">
+                                    <p>Developed C/C++ projects for streaming protocols and real-time embedded data processing, improving system reliability and latency handling.</p>
+                                </div>
+                            </div>
+    
+                        </div>
+
+                    </div>
+
+                    <div class="column lg-6 tab-12">
+
+                        <h2 class="text-pretitle" data-animate-el>
+                            Education
+                        </h2>
+
+                        <div class="timeline" data-animate-el>
+
+                            <div class="timeline__block">
+                                <div class="timeline__bullet"></div>
+                                <div class="timeline__header">
+                                    <h4 class="timeline__title">University of Maryland, College Park</h4>
+                                    <h5 class="timeline__meta">M.Eng. Embedded Systems</h5>
+                                    <p class="timeline__timeframe">Expected May 2026 &bull; GPA: 3.95 / 4.0</p>
+                                </div>
+                                <div class="timeline__desc">
+                                    <p>Coursework: Embedded Systems Hardware &amp; Software, Networking &amp; Distributed Systems (5G/6G), Real-Time Operating Systems, Autonomous Robotics, IoT, Embedded System Hacking &amp; Security.</p>
+                                </div>
+                            </div>
+    
+                            <div class="timeline__block">
+                                <div class="timeline__bullet"></div>
+                                <div class="timeline__header">
+                                    <h4 class="timeline__title">Charusat University, Gujarat, India</h4>
+                                    <h5 class="timeline__meta">B.Tech. Electronics &amp; Communication Engineering</h5>
+                                    <p class="timeline__timeframe">April 2024 &bull; GPA: 9.20 / 10</p>
+                                </div>
+                                <div class="timeline__desc">
+                                    <p>Built a strong foundation in electronics, microcontroller programming, and embedded system design. Completed multiple award-winning capstone projects in IoT and robotics.</p>
+                                </div>
+                            </div>
+    
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ### works
+            ================================================== -->
+            <section id="works" class="s-works target-section">
+
+                <div class="row works-portfolio">
+
+                    <div class="column lg-12" data-animate-block>
+
+                        <h2 class="text-pretitle" data-animate-el>
+                            Projects 
+                        </h2>
+                        <p class="h1" data-animate-el>
+                            A few things I've built, broken, and shipped. Click any card to read the full story.
+                        </p>
+    
+                        <ul class="folio-list row block-lg-one-half block-stack-on-1000">
+
+                            <li class="folio-list__item column" data-animate-el>
+                                <a class="folio-list__item-link" href="projects/cpa-stm32.html">
+                                    <div class="folio-list__item-pic">
+                                        <img src="images/portfolio/cpa-stm32.jpg"
+                                             srcset="images/portfolio/cpa-stm32.jpg 1x, images/portfolio/cpa-stm32@2x.jpg 2x" alt="Correlation Power Analysis" loading="lazy">
+                                    </div>
+                                    <div class="folio-list__item-text">
+                                        <div class="folio-list__item-cat">Hardware Security</div>
+                                        <div class="folio-list__item-title">Correlation Power Analysis on STM32F4.</div>
+                                        <div class="folio-list__view-cta">View Project <svg viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></div>
+                                    </div>
+                                </a>
+                                <a class="folio-list__proj-link" href="projects/cpa-stm32.html" title="project link">
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                                </a>
+                            </li>
+
+                            <li class="folio-list__item column" data-animate-el>
+                                <a class="folio-list__item-link" href="projects/self-driving-robot.html">
+                                    <div class="folio-list__item-pic">
+                                        <img src="images/portfolio/self-driving-robot.jpg" 
+                                             srcset="images/portfolio/self-driving-robot.jpg 1x, images/portfolio/self-driving-robot@2x.jpeg 2x" alt="Self-Driving Robot" loading="lazy">
+                                    </div>
+                                    <div class="folio-list__item-text">
+                                        <div class="folio-list__item-cat">Robotics &amp; AI &bull; 1st Prize ($2,400)</div>
+                                        <div class="folio-list__item-title">Self-Driving Robot for Power Gathering.</div>
+                                        <div class="folio-list__view-cta">View Project <svg viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></div>
+                                    </div>
+                                </a>
+                                <a class="folio-list__proj-link" href="projects/self-driving-robot.html" title="project link">
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                                </a>
+                            </li>
+
+                            <li class="folio-list__item column" data-animate-el>
+                                <a class="folio-list__item-link" href="projects/iot-drone.html">
+                                    <div class="folio-list__item-pic">
+                                        <img src="images/portfolio/iot-drone.jpg" 
+                                             srcset="images/portfolio/iot-drone.jpg 1x, images/portfolio/iot-drone@2x.jpg 2x" alt="IoT Water Quality Drone" loading="lazy">
+                                    </div>
+                                    <div class="folio-list__item-text">
+                                        <div class="folio-list__item-cat">IoT &amp; Blockchain &bull; SSIP Funded</div>
+                                        <div class="folio-list__item-title">IoT-Blockchain Water Quality Drone.</div>
+                                        <div class="folio-list__view-cta">View Project <svg viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></div>
+                                    </div>
+                                </a>
+                                <a class="folio-list__proj-link" href="projects/iot-drone.html" title="project link">
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                                </a>
+                            </li>
+
+                            <li class="folio-list__item column" data-animate-el>
+                                <a class="folio-list__item-link" href="projects/smart-irrigation.html">
+                                    <div class="folio-list__item-pic">
+                                        <img src="images/portfolio/smart-irrigation.jpg"
+                                             srcset="images/portfolio/smart-irrigation.jpg 1x, images/portfolio/smart-irrigation@2x.jpg 2x" alt="Smart Irrigation" loading="lazy">
+                                    </div>
+                                    <div class="folio-list__item-text">
+                                        <div class="folio-list__item-cat">IoT &amp; Embedded</div>
+                                        <div class="folio-list__item-title">ESP32 Smart Irrigation Nodes.</div>
+                                        <div class="folio-list__view-cta">View Project <svg viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></div>
+                                    </div>
+                                </a>
+                                <a class="folio-list__proj-link" href="projects/smart-irrigation.html" title="project link">
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                                </a>
+                            </li>
+
+                            <li class="folio-list__item column" data-animate-el>
+                                <a class="folio-list__item-link" href="projects/sightsense.html">
+                                    <div class="folio-list__item-pic">
+                                        <img src="images/portfolio/sightsense.jpg" 
+                                             srcset="images/portfolio/sightsense.jpg 1x, images/portfolio/sightsense@2x.jpg 2x" alt="SightSense" loading="lazy">
+                                    </div>
+                                    <div class="folio-list__item-text">
+                                        <div class="folio-list__item-cat">Assistive Tech &bull; Patent Filed</div>
+                                        <div class="folio-list__item-title">SightSense Smart Blind Stick.</div>
+                                        <div class="folio-list__view-cta">View Project <svg viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></div>
+                                    </div>
+                                </a>
+                                <a class="folio-list__proj-link" href="projects/sightsense.html" title="project link">
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                                </a>
+                            </li>
+
+                            <li class="folio-list__item column" data-animate-el>
+                                <a class="folio-list__item-link" href="projects/fpga-accelerators.html">
+                                    <div class="folio-list__item-pic">
+                                        <img src="images/portfolio/fpga-accelerators.jpg" 
+                                             srcset="images/portfolio/fpga-accelerators.jpg 1x, images/portfolio/fpga-accelerators@2x.jpg 2x" alt="FPGA Accelerators" loading="lazy">
+                                    </div>
+                                    <div class="folio-list__item-text">
+                                        <div class="folio-list__item-cat">FPGA &amp; Hardware &bull; IEEE Published</div>
+                                        <div class="folio-list__item-title">FPGA Accelerators (GNSS &amp; Robotics).</div>
+                                        <div class="folio-list__view-cta">View Project <svg viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></div>
+                                    </div>
+                                </a>
+                                <a class="folio-list__proj-link" href="projects/fpga-accelerators.html" title="project link">
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                                </a>
+                            </li>
+
+                        </ul> <!-- end folio-list -->
+
+                    </div> <!-- end column -->
+
+                </div> <!-- end works-portfolio -->
+
+            </section> <!-- end s-works -->
+
+           <!-- ### publications
+            ================================================== -->
+            <section id="publications" class="target-section" style="padding-bottom:var(--vspace-2);">
+
+                <div class="row" data-animate-block>
+                    <div class="column lg-12">
+
+                        <h2 class="text-pretitle" data-animate-el>
+                            Publications &amp; Patent
+                        </h2>
+                        <p class="h1" data-animate-el>
+                            Research that made it to print.
+                        </p>
+
+                        <div data-animate-el style="margin-top:var(--vspace-1_5);">
+
+                            <div style="border-bottom:1px solid rgba(255,255,255,0.06);padding-bottom:2.4rem;margin-bottom:2.4rem;">
+                                <h4 style="font-size:var(--text-md);margin-bottom:0.6rem;">
+                                    <a href="https://ieeexplore.ieee.org/document/10969225" target="_blank" rel="noopener" style="color:var(--color-text);text-decoration:none;">
+                                        FPGA Implementation of Hardware Accelerated 64-bit Floating Point Matrix-Multiplier for GNSS Data Processing
+                                    </a>
+                                </h4>
+                                <p style="color:var(--color-text-light);font-size:1.5rem;margin-bottom:0.8rem;">IEEE &bull; 2024</p>
+                                <a href="https://ieeexplore.ieee.org/document/10969225" target="_blank" rel="noopener" style="font-size:1.3rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-1);">Read Paper &nearr;</a>
+                            </div>
+
+                            <div style="border-bottom:1px solid rgba(255,255,255,0.06);padding-bottom:2.4rem;margin-bottom:2.4rem;">
+                                <h4 style="font-size:var(--text-md);margin-bottom:0.6rem;">
+                                    <a href="https://ieeexplore.ieee.org/document/10426431" target="_blank" rel="noopener" style="color:var(--color-text);text-decoration:none;">
+                                        AI-Enhanced Quad-Wheeled Robot for Targeted Plant Disease Surveillance in Greenhouses
+                                    </a>
+                                </h4>
+                                <p style="color:var(--color-text-light);font-size:1.5rem;margin-bottom:0.8rem;">IEEE &bull; 2023</p>
+                                <a href="https://ieeexplore.ieee.org/document/10426431" target="_blank" rel="noopener" style="font-size:1.3rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-1);">Read Paper &nearr;</a>
+                            </div>
+
+                            <div>
+                                <h4 style="font-size:var(--text-md);margin-bottom:0.6rem;">
+                                    SightSense — Smart Assistive Blind Stick
+                                </h4>
+                                <p style="color:var(--color-text-light);font-size:1.5rem;margin-bottom:0.8rem;">Patent Filed &bull; 2024</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ### contact
+            ================================================== -->
+            <section id="contact" class="s-contact target-section">
+
+                <div class="row contact-top">
+                    <div class="column lg-12">
+                        <h2 class="text-pretitle">
+                            Get In Touch
+                        </h2>
+
+                        <p class="h1">
+                            Got an interesting project, a research idea, 
+                            or just want to talk shop about FPGAs and firmware? I'm all ears.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row contact-bottom">
+                    <div class="column lg-3 md-5 tab-6 stack-on-550 contact-block">
+                        <h3 class="text-pretitle">Reach me at</h3>
+                        <p class="contact-links">
+                            <a href="mailto:nilayj@umd.edu">nilayj@umd.edu</a> <br>
+                            <a href="tel:+17038960396">(703) 896-0396</a>
+                        </p>
+                    </div>
+                    <div class="column lg-4 md-5 tab-6 stack-on-550 contact-block">
+                        <h3 class="text-pretitle">Social</h3>
+                        <ul class="contact-social">
+                            <li><a href="https://linkedin.com/in/nilayjadav" target="_blank" rel="noopener">LinkedIn</a></li>
+                            <li><a href="https://github.com/nilayjadav" target="_blank" rel="noopener">GitHub</a></li>
+                        </ul>
+                    </div>
+                    <div class="column lg-4 md-12 contact-block">
+                        <a href="mailto:nilayj@umd.edu" class="btn btn--medium u-fullwidth contact-btn">Say Hello.</a>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- ## footer
+        ================================================== -->
+        <footer class="s-footer">
+
+            <div class="row">
+                <div class="column ss-copyright">
+                    <span>&copy; 2025 Nilay Jadav</span> 
+                    <span>Design by <a href="https://www.styleshout.com/">StyleShout</a></span>
+                </div>
+
+                <div class="ss-go-top">
+                    <a class="smoothscroll" title="Back to Top" href="#top">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+        </footer>
+
+    </div>
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>

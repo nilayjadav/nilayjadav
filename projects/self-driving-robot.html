@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Self-Driving Robot for Power Gathering | Nilay Jadav</title>
+    <meta name="description" content="Custom AI image detection on Jetson Orin with supercapacitor power harvesting. 1st Prize at MYRT International Robotics Competition.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/vendor.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/project.css">
+</head>
+
+<body id="top">
+    <div class="s-pagewrap">
+        <header class="s-header">
+            <div class="header-mobile">
+                <span class="mobile-home-link"><a href="../index.html">Nilay.</a></span>
+                <a class="mobile-menu-toggle" href="#0"><span>Menu</span></a>
+            </div>
+            <div class="row wide main-nav-wrap">
+                <nav class="column lg-12 main-nav">
+                    <ul>
+                        <li><a href="../index.html" class="home-link">Nilay.</a></li>
+                        <li><a href="../index.html#intro">Intro</a></li>
+                        <li><a href="../index.html#about">About</a></li>
+                        <li class="current"><a href="../index.html#works">Projects</a></li>
+                        <li><a href="../index.html#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="s-content">
+            <section class="s-project-hero">
+                <div class="row">
+                    <div class="column lg-12">
+                        <div class="text-pretitle with-line">Robotics &amp; AI &bull; April 2024</div>
+                        <h1 class="project-hero__title">Self-Driving Robot for Power Gathering</h1>
+                        <div class="project-hero__meta">
+                            <span>Jetson Orin</span>
+                            <span>AI / Computer Vision</span>
+                            <span>Supercapacitors</span>
+                            <span>1st Prize — $2,400</span>
+                        </div>
+                        <p class="project-hero__summary">
+                            An autonomous robot that finds and harvests energy on its own. I built a custom AI 
+                            image detection model on Jetson Orin, paired it with a supercapacitor-based power system, 
+                            and led the team to first place at the MYRT International Robotics Competition. Read below to know what went wrong and how we still cooked!
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="s-project-content">
+                <div class="row">
+                    <div class="column lg-12 project-content__main">
+
+                        <div class="project-media">
+                            <img src="../images/portfolio/gallery/g-self-driving-robot1.jpeg" alt="Self-Driving Robot" loading="lazy">
+                            <p class="project-media__caption">Competition robot</p>
+                        </div>
+                        <div class="project-media">
+                            <img src="../images/portfolio/gallery/g-self-driving-robot2.jpg" alt="Self-Driving Robot" loading="lazy">
+                            <p class="project-media__caption">Us bagging the first prize!</p>
+                        </div>
+                        <h3>The Problem</h3>
+                        <p>
+                            The MYRT International Robotics Competition asked teams to build a robot that could 
+                            autonomously navigate an arena, identify energy sources, and harvest power, all without 
+                            any human input. It's a full-systems challenge: perception, planning, actuation, and 
+                            power management all had to work together under real-world conditions.
+                        </p>
+
+                        <h3>How I Built It</h3>
+                        <p>
+                            The brains of the robot was an NVIDIA Jetson Orin running a custom-trained AI image 
+                            detection model. I built and fine-tuned the model to identify energy stations in the 
+                            competition arena, then integrated it with a real-time navigation stack for obstacle 
+                            avoidance and route planning. But on the day, it did not work as expected as the detection poles
+                            were much different then the training pictures, on top of that the lighting was making it harder.
+                        </p>
+                        <p>
+                            What we did next was crazy, we ditched the Jetson, the main brain and replaced it with the low computing Arduino!
+                            I knew this could happen, so I had a PID based motor movement for the bot, as the motors were just normal 100-150 geared rpm motors.
+                            We coded the bot to move on the path, timed it well and just prayed for it to work. We updated the path every round and it worked!
+                        </p>
+                        <p>
+                            The power system was the part I'm proudest of. Instead of conventional batteries, I 
+                            designed a supercapacitor-based energy harvesting and storage system that could charge 
+                            rapidly from the arena's energy stations and provide stable power for the Jetson and 
+                            motors. Balancing fast-charge cycles with steady output required careful power electronics design.
+                        </p>
+                        <p>
+                            I also secured $1,150 in funding to cover development costs and led the team through 
+                            design reviews, build sprints, and competition prep.
+                        </p>
+
+                        <h3>Tech Stack</h3>
+                        <div class="tech-stack">
+                            <span>NVIDIA Jetson Orin</span>
+                            <span>Custom AI Model</span>
+                            <span>Computer Vision</span>
+                            <span>Supercapacitors</span>
+                            <span>Power Electronics</span>
+                            <span>Motor Control</span>
+                        </div>
+
+                        <h3>Demo Video</h3>
+                        <a href="https://www.youtube.com/watch?v=VOvmuIaArpA" target="_blank" rel="noopener" class="video-thumb">
+                            <img src="https://img.youtube.com/vi/VOvmuIaArpA/maxresdefault.jpg" alt="Watch demo video" loading="lazy">
+                            <div class="video-thumb__play"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>
+                            <div class="video-thumb__label">Watch on YouTube &nearr;</div>
+                        </a>
+
+
+                        <div class="project-results">
+                            <h4>Results</h4>
+                            <ul>
+                                <li><strong>1st Prize ($2,400)</strong> at the MYRT International Robotics Competition</li>
+                                <li><strong>$1,150 in funding</strong> secured for development</li>
+                                <li><strong>Custom AI detection + supercapacitor power</strong> — end-to-end system design</li>
+                            </ul>
+                        </div>
+
+                        <h3>What I Took Away</h3>
+                        <p>
+                            Winning was great, but the real lesson was in managing the integration. A robot this 
+                            complex doesn't fail in one subsystem, it fails at the seams between them. Getting 
+                            perception, power, and actuation to play nicely under competition pressure taught me 
+                            more about systems engineering than any textbook.
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="column lg-12 project-nav">
+                        <a href="cpa-stm32.html">&larr; Previous: CPA on STM32F4</a>
+                        <a href="../index.html#works" class="project-nav__back">&larr; All Projects</a>
+                        <a href="iot-drone.html">Next: IoT Water Drone &rarr;</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="s-footer">
+            <div class="row">
+                <div class="column ss-copyright"><span>&copy; 2025 Nilay Jadav</span><span>Design by <a href="https://www.styleshout.com/">StyleShout</a></span></div>
+                <div class="ss-go-top"><a title="Back to Top" href="#top"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/></svg></a></div>
+            </div>
+        </footer>
+    </div>
+    <script src="../js/plugins.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
